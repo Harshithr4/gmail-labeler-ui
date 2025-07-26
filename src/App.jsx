@@ -2,13 +2,13 @@ import './index.css'
 function App() {
   const handleGmailConnect = () => {
     window.location.href =
-      "https://your-railway-domain/rest/oauth2-credential/auth?credentialName=Gmail"
+      "https://gmail-labeler-backend.onrender.com/rest/oauth2-credential/auth?credentialName=Gmail"
   }
 
   const handleLabeling = async () => {
     try {
       const res = await fetch(
-        "https://your-railway-domain/webhook/gmail-label",
+        "https://gmail-labeler-backend.onrender.com/webhook/gmail-label",
         { method: "POST" }
       )
       const data = await res.json()
